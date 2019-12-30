@@ -1,0 +1,32 @@
+<script type="text/javascript">
+    RED.nodes.registerType('tc-router',{
+        category: 'config',
+        defaults: {
+            host: {value:"192.168.0.1",required:true},
+            port: {value:1432,required:true,validate:RED.validators.number()},
+            timeout: {value: 5000,required:true,validate:RED.validators.number()}
+        },
+        label: function() {
+            return this.host+":"+this.port;
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="tc-router">
+    <div class="form-row">
+        <label for="node-config-input-host"><i class="icon-bookmark"></i> Host</label>
+        <input type="text" id="node-config-input-host">
+    </div>
+    <div class="form-row">
+        <label for="node-config-input-port"><i class="icon-bookmark"></i> Port</label>
+        <input type="text" id="node-config-input-port">
+    </div>
+    <div class="form-row">
+        <label for="node-config-input-timeout"><i class="icon-bookmark"></i> Timeout</label>
+        <input type="text" id="node-config-input-timeout">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="tc-router">
+    <p>Testing 123</p>
+</script>

@@ -1,9 +1,9 @@
 <script type="text/javascript">
     RED.nodes.registerType('send-sms',{
-        category: 'function',
+        category: 'TC Router',
         color: '#a6bbcf',
         defaults: {
-            name: {value:""}
+            router: {type:"tc-router",required: true}
         },
         inputs:1,
         outputs:1,
@@ -16,11 +16,15 @@
 
 <script type="text/x-red" data-template-name="send-sms">
     <div class="form-row">
+        <label for="node-input-router"><i class="icon-globe"></i> Router</label>
+        <input type="text" id="node-input-router"></input>
+    </div>
+    <div class="form-row">
         <label for="node-input-name"><i class="icon-tag"></i> Name</label>
         <input type="text" id="node-input-name" placeholder="Name">
     </div>
 </script>
 
 <script type="text/x-red" data-help-name="send-sms">
-    <p>A simple node that converts the message payloads into all lower-case characters</p>
+    <p>Sends SMS messages via the TC Router socket server xml interface</p>
 </script>
