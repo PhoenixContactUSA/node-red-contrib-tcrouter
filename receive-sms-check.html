@@ -1,0 +1,31 @@
+<script type="text/javascript">
+    RED.nodes.registerType('receive-sms-check',{
+        category: 'TC Router',
+        color: '#a6bbcf',
+        defaults: {
+            router: {required: true, type: "tc-router"},
+            name: {value:"receive-sms-check"}
+        },
+        inputs:1,
+        outputs:1,
+        icon: "file.png",
+        label: function() {
+            return this.name||"receive-sms-check";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="receive-sms-check">
+    <div class="form-row">
+        <label for="node-input-router"><i class="icon-globe"></i> TC Router</label>
+        <input type="text" id="node-input-router"></input>
+    </div>
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="receive-sms-check">
+    <p>Checks the TC Router for a received SMS message</p>
+</script>

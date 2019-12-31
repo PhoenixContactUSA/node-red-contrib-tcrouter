@@ -19,7 +19,8 @@
     "nodes": {
         "send-email": "send-email.js",
         "send-sms": "send-sms.js",
-        "receive-sms": "receive-sms.js",
+        "receive-sms-check": "receive-sms-check.js",
+        "receive-sms-ack": "receive-sms-ack.js",
         "control-vpn": "control-vpn.js",
         "control-output": "control-output.js",
         "get-info": "get-info.js",
