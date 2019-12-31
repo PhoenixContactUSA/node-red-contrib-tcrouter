@@ -28,4 +28,27 @@
 
 <script type="text/x-red" data-help-name="receive-sms-check">
     <p>Checks the TC Router for a received SMS message</p>
+    <h3>Input</h3>
+    <p>This node requires any input change to trigger a new check</p>
+    <h3>Output</h3>
+    <dl class="message-properties">
+            <dt>success
+                <span class="property-type">bool</span>
+            </dt>
+            <dd>Was there a new message received?</dd>
+            <dt class="optional">timestamp
+                <span class="property-type">string</span>
+            </dt>
+            <dd>Timestamp of when the message was received by the TC Router.  Only available if success is true</dd>
+            <dt class="optional">SMS
+                <span class="property-type">object</span>
+            <dd>JSON object detailing the received SMS message. Available if success is true</dd>
+            <dt class="optional">message
+                <span class="property-type">string</span>
+            </dt>
+            <dd>Failure message returned by the router. Available if success was false</dd>
+        </dl>
+    <h3>Details</h3>
+    <p>This function asks the TC Router if a new sms message has been received by the router.  If a message has been received, the message should be acted upon or stored and then must be cleared from the TC Routers memory so that new messages can be received. In order to clear the memory, the 'receive-sms-ack' node must be used.
+    </p>
 </script>
