@@ -22,7 +22,8 @@
         "receive-sms": "receive-sms.js",
         "control-vpn": "control-vpn.js",
         "control-io": "control-io.js",
-        "get-info": "get-info.js"
+        "get-info": "get-info.js",
+        "tc-router":"tc-router.js"
     }
   },
   "dependencies": {
