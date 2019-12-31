@@ -21,8 +21,9 @@
         "send-sms": "send-sms.js",
         "receive-sms": "receive-sms.js",
         "control-vpn": "control-vpn.js",
-        "control-io": "control-io.js",
+        "control-output": "control-output.js",
         "get-info": "get-info.js",
+        "get-io": "get-io.js",
         "tc-router":"tc-router.js"
     }
   },
