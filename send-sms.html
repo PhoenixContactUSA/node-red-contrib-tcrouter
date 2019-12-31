@@ -27,4 +27,29 @@
 
 <script type="text/x-red" data-help-name="send-sms">
     <p>Sends SMS messages via the TC Router socket server xml interface</p>
+    <h3>Input</h3>
+    <dl class="message-properties">
+        <dt>contacts
+            <span class="property-type">string | array[String]</span>
+        </dt>
+        <dd>The target contacts to send the message to</dd>
+        <dt>content
+            <span class="property-type">string</span>
+        </dt>
+        <dd>Message to be sent to the phone numbers listed in the contacts property</dd>
+    </dl>
+    <h3>Output</h3>
+    <dl class="message-properties">
+        <dt>success
+            <span class="property-type">bool</span>
+        </dt>
+        <dd>Was the message sent to the user</dd>
+        <dt class="optional">length
+            <span class="property-type">string</span>
+        </dt>
+        <dd>Length of message sent</dd>
+        <dt class="optional">message
+            <span class="property-type">string</span>
+        </dt>
+        <dd>Copy of the message sent to the contact</dd>
 </script>

@@ -1,0 +1,193 @@
+[
+    {
+        "id": "524d9019.6303d",
+        "type": "tab",
+        "label": "Basic TC Router Example",
+        "disabled": false,
+        "info": "Example of how to use each functionality of the TC Router node-red package."
+    },
+    {
+        "id": "cff0b0d5.14f3e",
+        "type": "inject",
+        "z": "524d9019.6303d",
+        "name": "Text Zach",
+        "topic": "",
+        "payload": "{\"contacts\":\"7176026963\",\"content\":\"hello world\"}",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 300,
+        "y": 380,
+        "wires": [
+            [
+                "67426f5c.73acf"
+            ]
+        ]
+    },
+    {
+        "id": "67426f5c.73acf",
+        "type": "get-info",
+        "z": "524d9019.6303d",
+        "router": "c0e4cf50.80c3a",
+        "name": "get info",
+        "x": 520,
+        "y": 460,
+        "wires": [
+            [
+                "302ef563.665cfa"
+            ]
+        ]
+    },
+    {
+        "id": "302ef563.665cfa",
+        "type": "debug",
+        "z": "524d9019.6303d",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 800,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "7a3aff25.e5e7b",
+        "type": "control-output",
+        "z": "524d9019.6303d",
+        "router": "c0e4cf50.80c3a",
+        "name": "control output",
+        "x": 520,
+        "y": 620,
+        "wires": [
+            [
+                "a55d3d7c.6e58b"
+            ]
+        ]
+    },
+    {
+        "id": "1fd21d7a.c69873",
+        "type": "inject",
+        "z": "524d9019.6303d",
+        "name": "Output 1 ON",
+        "topic": "",
+        "payload": "{\"index\":0,\"value\":true}",
+        "payloadType": "json",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 250,
+        "y": 580,
+        "wires": [
+            [
+                "7a3aff25.e5e7b"
+            ]
+        ]
+    },
+    {
+        "id": "a55d3d7c.6e58b",
+        "type": "debug",
+        "z": "524d9019.6303d",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 810,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "3113dfdf.fbef1",
+        "type": "get-io",
+        "z": "524d9019.6303d",
+        "router": "c0e4cf50.80c3a",
+        "name": "get io",
+        "x": 560,
+        "y": 280,
+        "wires": [
+            [
+                "9e441cfa.63615"
+            ]
+        ]
+    },
+    {
+        "id": "e7104fd9.1fc",
+        "type": "inject",
+        "z": "524d9019.6303d",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 300,
+        "y": 240,
+        "wires": [
+            [
+                "3113dfdf.fbef1"
+            ]
+        ]
+    },
+    {
+        "id": "9e441cfa.63615",
+        "type": "debug",
+        "z": "524d9019.6303d",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 760,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "63c01eb9.5928a",
+        "type": "receive-sms-check",
+        "z": "524d9019.6303d",
+        "router": "c0e4cf50.80c3a",
+        "name": "receive-sms-check",
+        "x": 660,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2e58d471.33a9ac",
+        "type": "inject",
+        "z": "524d9019.6303d",
+        "name": "5 Second Check",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "5",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 410,
+        "y": 100,
+        "wires": [
+            [
+                "63c01eb9.5928a"
+            ]
+        ]
+    },
+    {
+        "id": "c0e4cf50.80c3a",
+        "type": "tc-router",
+        "z": "",
+        "host": "192.168.0.1",
+        "port": "1432",
+        "timeout": "5000"
+    }
+]

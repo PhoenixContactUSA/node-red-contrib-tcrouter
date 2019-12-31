@@ -28,4 +28,34 @@
 
 <script type="text/x-red" data-help-name="send-email">
     <p>Sends Emails via the TC Router socket server xml interface</p>
+    <h3>Input</h3>
+    <dl class="message-properties">
+        <dt>to
+            <span class="property-type">string | array[String]</span>
+        </dt>
+        <dd>The email addresses to send to</dd>
+        <dt class="optional">cc
+            <span class="property-type">string</span>
+        </dt>
+        <dd>Carbon copy recipients</dd>
+        <dt>subject
+            <span class="property-type">string</span>
+        </dt>
+        <dd>Subject of the email</dd>
+        <dt>body
+            <span class="property-type">string</span>
+        </dt>
+        <dd>Content of the email</dd>
+    </dl>
+    <h3>Outputs</h3>
+    <dl class="message-properties">
+        <dt>success
+            <span class="property-type">bool</span>
+        </dt>
+        <dd>Was the email sent successfully</dd>
+        <dt class="optional">message
+            <span class="property-type">string</span>
+        </dt>
+        <dd>Optional property/message returned by router describing why an email failed to send</dd>
+    </dl>
 </script>
