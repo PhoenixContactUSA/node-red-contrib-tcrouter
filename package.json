@@ -1,7 +1,7 @@
 {
   "name": "@phoenixcontactusa/red-contrib-tcrouter",
   "version": "1.0.0",
-  "description": "Node red nodes for communicating with Phoenix Contact TC Router",
+  "description": "Node red nodes for communicating with the Phoenix Contact TC Router",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,7 +11,7 @@
     "Router",
     "Phoenix",
     "Contact",
-    "nodered"
+    "node-red"
   ],
   "author": "Zachary Mink",
   "license": "MIT",
