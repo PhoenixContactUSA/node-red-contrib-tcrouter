@@ -27,5 +27,26 @@
 </script>
 
 <script type="text/x-red" data-help-name="get-io">
-    
+    <p>Retrieves I/O statuses of the TC Router</p>
+    <h3>Input</h3>
+    <p>Any change in input to this node will trigger a poll for current I/O values on the TC Router</p>
+
+    <h3>Output</h3>
+    <p>Each of the following properties has a boolean value accessor</p>
+    <dl class="message-properties">
+            <dt>input
+                <span class="property-type">array[bool]</span>
+            </dt>
+            <dd>Digital input statuses</dd>
+
+            <dt>output
+                    <span class="property-type">array[bool]</span>
+                </dt>
+            <dd>Digital output statuses</dd>
+
+            <dt>gprs
+                <span class="property-type">object</span>
+            </dt>
+            <dd>Value property contains the status of the gprs module</dd>
+    </dl>
 </script>
