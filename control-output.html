@@ -27,5 +27,23 @@
 </script>
 
 <script type="text/x-red" data-help-name="control-output">
-    <p>Controls onboard i/o on a TC Router</p>
+    <p>Controls the digital output on a TC Router</p>
+    <h3>Input</h3>
+    <dl class="message-properties">
+            <dt>index
+                <span class="property-type">integer</span>
+            </dt>
+            <dd>Index of the output to control</dd>
+
+            <dt>value
+                    <span class="property-type">bool</span>
+                </dt>
+            <dd>Intended value of the output</dd>
+
+        </dl>
+    <h3>Output</h3>
+    <p>In response to this request, the response object will take the same form as the get-io node response object</p>
+
+    <h3>Details</h3>
+    <p>At the time of the writing of this documentation, the TC Router family of devices has 1 digital output.  The index of output for this node must therefore be 1.</p>
 </script>
