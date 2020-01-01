@@ -28,4 +28,142 @@
 
 <script type="text/x-red" data-help-name="get-info">
     <p>Retrieves status information from a TC Router</p>
+    <h3>Input</h3>
+    <p>This node requires a simple input trigger such as a timestamp inject in order to poll the TC Router for the information listed in the output section</p>
+
+    <h3>Output</h3>
+
+    <p>A succesful response from the TC Router returns a JSON object with the following properties.  Each property below has a "value" property which must be accessed to return the actual value.</p>
+    
+    <h2><b>device</b></h2>
+        <dl class="message-properties">
+            <dt>serialno
+                <span class="property-type">string</span>
+            </dt>
+            <dd>Serial number of the device</dd>
+
+            <dt class="optional">hardware
+                <span class="property-type">string</span>
+            </dt>
+            <dd>Hardware revision of the device</dd>
+            
+            <dt class="optional">firmware
+                <span class="property-type">string</span>
+            <dd>Firmware revision of the device</dd>
+            
+            <dt class="optional">wbm
+                <span class="property-type">string</span>
+            </dt>
+            <dd>Revision of the web based management GUI</dd>
+        </dl>
+
+    <h2><b>radio</b></h2>
+        <dl class="message-properties">
+            <dt>provider
+                <span class="property-type">string</span>
+            </dt>
+            <dd>Cellular provider</dd>
+
+            <dt>rssi
+                    <span class="property-type">number</span>
+                </dt>
+            <dd>RSSI in integer format</dd>
+
+            <dt>rssiDBM
+                    <span class="property-type">string</span>
+                </dt>
+            <dd>RSSI in string format with units of DBM</dd>
+
+            <dt>creg
+                    <span class="property-type">number</span>
+                </dt>
+            <dd>Status of registration in the cellular network in its raw form from the device</dd>
+
+            <dt>cregString
+                    <span class="property-type">string</span>
+                </dt>
+            <dd>Status of registration in the cellular network in the decoded string format</dd>
+
+            <dt>lac
+                    <span class="property-type">string</span>
+                </dt>
+            <dd>Location Area Code (LAC) of the device in a cellular network (hexadecimal number, maximum of 4 digits)</dd>
+
+            <dt>ci
+                    <span class="property-type">string</span>
+                </dt>
+            <dd> Cell ID, unique identification of the radio cell within the LAC (hexadecimal number, maximum of 8 digits)</dd>
+
+            <dt>packet
+                    <span class="property-type">number</span>
+                </dt>
+            <dd>Internet data status in raw integer format from the device (decimal number 0 ... 8)</dd>
+
+            <dt>packetString
+                    <span class="property-type">string</span>
+                </dt>
+            <dd>Internet data status in its decoded string format</dd>
+
+            <dt>simstatus
+                    <span class="property-type">number</span>
+                </dt>
+            <dd>Status of the SIM card (decimal number 0 ... 5)</dd>
+
+            <dt>simstatusString
+                    <span class="property-type">string</span>
+                </dt>
+            <dd>Status of the SIM card in its decoded string format</dd>
+
+            <dt>simselect
+                    <span class="property-type">number</span>
+                </dt>
+            <dd>Undocumented</dd>
+
+        </dl>
+
+    <h2><b>inet</b></h2>
+
+        <dl class="message-properties">
+            <dt>ip
+                <span class="property-type">string</span>
+            </dt>
+            <dd>IP address of the packet data connection on the Internet</dd>
+
+            <dt>rx_bytes
+                    <span class="property-type">number</span>
+            </dt>
+            <dd>Number of data bytes received so far (decimal number 0 ... 4294967295)</dd>
+
+            <dt>tx_bytes
+                    <span class="property-type">number</span>
+            </dt>
+            <dd>Number of data bytes transmitted so far (decimal number 0 ... 4294967295)</dd>
+
+            <dt>mtu
+                    <span class="property-type">number</span>
+            </dt>
+            <dd>Maximum Transmission Unit (MTU), the maximum packet size, in bytes, in the packet data network (decimal number 128 ... 1500)</dd>
+
+        </dl>
+
+    <h2><b>io</b></h2>
+
+    <dl class="message-properties">
+            <dt>gsm
+                <span class="property-type">array[String]</span>
+            </dt>
+            <dd>Status of the GSM/UMTS connection</dd>
+
+            <dt>inet
+                    <span class="property-type">array[String]</span>
+                </dt>
+            <dd>Status of the internet connection</dd>
+
+            <dt>vpn
+                    <span class="property-type">array[String]</span>
+                </dt>
+            <dd>Status of the vpn tunnel</dd>
+
+    </dl>
+
 </script>

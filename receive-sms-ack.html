@@ -27,5 +27,14 @@
 </script>
 
 <script type="text/x-red" data-help-name="receive-sms-ack">
-    <p>Acknowledges a received SMS message from the TC Router so that it can be cleared from memory</p>
+    <p>Acknowledges a received SMS message from the TC Router so that it can be cleared from memory.  Deletes the last received sms message.</p>
+    <h3>Input</h3>
+    <p>This node requires any input change to trigger clearing the last received sms from memory</p>
+    <h3>Output</h3>
+    <dl class="message-properties">
+            <dt>success
+                <span class="property-type">bool</span>
+            </dt>
+            <dd>Was the message succesfully removed from memory?</dd>
+    </dl>
 </script>
