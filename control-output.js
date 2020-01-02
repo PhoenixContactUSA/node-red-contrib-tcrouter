@@ -7,7 +7,7 @@ module.exports = function(RED) {
         if (this.router){
             this.on('input', function(msg, send, done) {
 
-                node.router.controlOutput(msg.index,msg.value).then((res)=>{
+                node.router.controlOutput(parseInt(msg.payload.index),msg.payload.value).then((res)=>{
                     
                     node.status({fill:"green",shape:"dot"});
                     

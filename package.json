@@ -15,20 +15,20 @@
   ],
   "author": "Zachary Mink",
   "license": "MIT",
-  "node-red" : {
+  "node-red": {
     "nodes": {
-        "send-email": "send-email.js",
-        "send-sms": "send-sms.js",
-        "receive-sms-check": "receive-sms-check.js",
-        "receive-sms-ack": "receive-sms-ack.js",
-        "control-vpn": "control-vpn.js",
-        "control-output": "control-output.js",
-        "get-info": "get-info.js",
-        "get-io": "get-io.js",
-        "tc-router":"tc-router.js"
+      "send-email": "send-email.js",
+      "send-sms": "send-sms.js",
+      "receive-sms-check": "receive-sms-check.js",
+      "receive-sms-ack": "receive-sms-ack.js",
+      "control-vpn": "control-vpn.js",
+      "control-output": "control-output.js",
+      "get-info": "get-info.js",
+      "get-io": "get-io.js",
+      "tc-router": "tc-router.js"
     }
   },
   "dependencies": {
-    "@phoenixcontactusa/node-tcrouter": "^1.0.5"
+    "@phoenixcontactusa/node-tcrouter": "^1.0.6"
   }
 }
