@@ -10,12 +10,13 @@ module.exports = function(RED) {
 
                 node.router.getAllInfo().then((res)=>{
                     // if (res.success === true){
-                    node.status({fill:"green",shape:"dot",text:"sent"});
+                    node.status({fill:"green",shape:"dot"});
                     // }else if (res.success === false){
                     //     node.status({fill:"red",shape:"ring",text:"send failed"});
                     // }
+                    msg.payload = res;
 
-                    send(res);
+                    node.send(msg);
 
                     if (done) {
                         done();

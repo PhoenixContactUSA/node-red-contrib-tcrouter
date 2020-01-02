@@ -15,7 +15,8 @@ module.exports = function(RED) {
                         node.status({fill:"red",shape:"ring",text:"message failed to clear"});
                     }
 
-                    send(res);
+                    msg.payload = res;
+                    send(msg);
 
                     if (done) {
                         done();

@@ -9,9 +9,10 @@ module.exports = function(RED) {
 
                 node.router.controlOutput(msg.index,msg.value).then((res)=>{
                     
-                    node.status({fill:"green",shape:"dot",text:"sent"});
-
-                    send(res);
+                    node.status({fill:"green",shape:"dot"});
+                    
+                    msg.payload = res;
+                    send(msg);
 
                     if (done) {
                         done();

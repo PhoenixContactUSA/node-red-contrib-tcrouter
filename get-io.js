@@ -12,7 +12,8 @@ module.exports = function(RED) {
                     
                     node.status({fill:"green",shape:"dot"});
 
-                    send(res);
+                    msg.payload = res;
+                    send(msg);
 
                     if (done) {
                         done();
