@@ -12,7 +12,7 @@ module.exports = function(RED) {
                     if (res.success === true){
                         node.status({fill:"green",shape:"dot",text:res.SMS.content});
                     }else if (res.success === false){
-                        node.status({fill:"red",shape:"ring",text:res.message});
+                        node.status({fill:"yellow",shape:"dot",text:res.message});
                     }
 
                     msg.payload = res;
