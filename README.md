@@ -1,6 +1,6 @@
 # node-red-contrib-tcrouter
 
-This repo contains the source code for node-red-contrib-tc-router.  It is based on the nodejs library [node-tcrouter](https://github.com/PhoenixContactUSA/node-tcrouter) for communicating with the Phoenix Contact TC Router.  With this set of node-red nodes, one can send and receive text messages, start and stop vpn's, send emails, control the onboard output, read the on board input and monitor status information of the TC Router device.  This library forms an alternative to using a Twilio subscription.  With the TC Router and an associated SIM Card for internet access, all of the listed features are available for free.
+This repo contains the source code for node-red-contrib-tc-router.  It is based on the nodejs library [node-tcrouter](https://github.com/PhoenixContactUSA/node-tcrouter) for communicating with the Phoenix Contact TC Router.  With this set of node-red nodes, one can send and receive text messages, start and stop vpn's, send emails, control the onboard output, read the on board input and monitor status information of the TC Router device.  Using this library and the TC Router, one can easily monitor and interact with remote devices while minimizing the overall cost of their system.
 
 # Setup
 
