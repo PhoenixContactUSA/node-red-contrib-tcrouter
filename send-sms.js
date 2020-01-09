@@ -8,7 +8,7 @@ module.exports = function(RED) {
         if (this.router){
             this.on('input', function(msg, send, done) {
 
-                node.router.sendSMS(msg.contacts,msg.content).then((res)=>{
+                node.router.sendSMS(msg.payload.contacts,msg.payload.content).then((res)=>{
                     if (res.success === true){
                         node.status({fill:"green",shape:"dot",text:"sent"});
                     }else if (res.success === false){
