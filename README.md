@@ -8,6 +8,8 @@ In order to use the nodes in this node-red package, the TC Router device must be
 
 # Nodes
 
+![Example Flow](./assets/example.png)
+
 ## send-sms
 
 Sends text messages to a list of recipients from the SIM cards associated phone number.
