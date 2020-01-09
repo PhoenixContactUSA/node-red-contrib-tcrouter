@@ -28,9 +28,9 @@ Reads the on board inputs and output of the TC Router.
 
 Gets the status information of TC Router.  Useful information provided include RSSI (internet signal strength), internet connectivity status, SIM card and activation status, etc.
 
-## control-vpn
+<!-- ## control-vpn
 
-Provides the ability to start and stop configured VPN's.  Enables secure communication to be controlled in software.  Provides the ability to switch VPN tunnels based on fail over logic, etc.
+Provides the ability to start and stop configured VPN's.  Enables secure communication to be controlled in software.  Provides the ability to switch VPN tunnels based on fail over logic, etc. -->
 
 ## control-output
 
