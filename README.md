@@ -12,23 +12,48 @@ In order to use the nodes in this node-red package, the TC Router device must be
 
 ## send-sms
 
-Sends text messages to a list of recipients from the SIM cards associated phone number.
+Sends text messages to a list of recipients from the SIM cards associated phone number. This block requires the following msg.payload with the following json format
+
+```javascript
+{
+    "contacts": "11122233333",
+    "content": "hello world"
+}
+```
+
+The contacts input can also accept an array of phone numbers for texting multiple numbers simultaneously:
+
+```javascript
+{
+    "contacts": ["1112223333","2223334444"],
+    "content": "hello world"
+}
+```
 
 ## send-email
 
-Sends email from the configured SMTP server email address.
+Sends email from the configured SMTP server email address. This block requires a msg.payload with the following format
+
+```javascript
+{
+    "to": "test@test.com",
+    "cc": "testcc@test.com",
+    "subject":"Hello World",
+    "body":"hello world from node-red-tcrouter"
+}
+```
 
 ## receive-sms-check && receive-sms-ack
 
-Provides the ability to receive text messages and then perform associated actions from within node-red.
+Provides the ability to receive text messages and then perform associated actions from within node-red.  The "receive-sms-check" block requires an input trigger to check the router for new messages.  An inject block with a timestamp payload is sufficient.  The "receive-sms-ack" block also requires a simple trigger to clear the previous sms message from the router's memory.
 
 ## get-io
 
-Reads the on board inputs and output of the TC Router.
+Reads the on board inputs and output of the TC Router. Any input, such as an injected timestamp, will trigger this block to request the IO status of the associated tcrouter.
 
 ## get-info
 
-Gets the status information of TC Router.  Useful information provided include RSSI (internet signal strength), internet connectivity status, SIM card and activation status, etc.
+Gets the status information of TC Router.  Useful information provided include RSSI (internet signal strength), internet connectivity status, SIM card and activation status, etc.  To trigger this block to read the status information from the configured TC Router, any change in input is sufficient.
 
 <!-- ## control-vpn
 
@@ -36,4 +61,12 @@ Provides the ability to start and stop configured VPN's.  Enables secure communi
 
 ## control-output
 
-Sets the on board output of the TC Router to on or off based on the provided input.
+Sets the on board output of the TC Router to on or off based on the provided input.  This block requires a msg.payload with the following json format
+
+```javascript
+{
+    "index": 1,
+    "value": true
+}
+```
+As of the writing of this document, the output index must be 1 (the TC Router has 1 available output).  The "value" property must be a boolean value representing turning the output on (true) or off (false)
