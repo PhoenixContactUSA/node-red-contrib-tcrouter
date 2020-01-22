@@ -7,7 +7,7 @@ module.exports = function(RED) {
         if (this.router){
             this.on('input', function(msg, send, done) {
 
-                node.router.sendEmail(msg.to,msg.subject,msg.body,msg.cc).then((res)=>{
+                node.router.sendEmail(msg.payload.to,msg.payload.subject,msg.payload.body,msg.payload.cc).then((res)=>{
                     if (res.success === true){
                         node.status({fill:"green",shape:"dot",text:"sent"});
                     }else if (res.success === false){
