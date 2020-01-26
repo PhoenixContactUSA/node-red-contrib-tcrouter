@@ -70,3 +70,15 @@ Sets the on board output of the TC Router to on or off based on the provided inp
 }
 ```
 As of the writing of this document, the output index must be 1 (the TC Router has 1 available output).  The "value" property must be a boolean value representing turning the output on (true) or off (false)
+
+## control-vpn
+
+Turns a configured vpn on or off.  Requires the following msg.payload input:
+
+```javascript
+{
+    "type":  2,      //must be 1 for ipsec, 2 for openvpn
+    "index": 1,      //must be greater than 0 - index of the vpn configured
+    "state": true   //true for on, false for off
+}
+```
