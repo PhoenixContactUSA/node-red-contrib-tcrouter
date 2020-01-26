@@ -1,32 +1,28 @@
 {
-  "name": "@phoenixcontactusa/node-red-contrib-tcrouter",
-  "version": "1.0.1",
-  "description": "Node red nodes for communicating with the Phoenix Contact TC Router",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [
-    "TC Router",
-    "Phoenix Contact",
-    "node-red",
-    "IIOT"
-  ],
-  "author": "Zachary Mink",
-  "license": "MIT",
-  "node-red": {
-    "nodes": {
-      "send-email": "send-email.js",
-      "send-sms": "send-sms.js",
-      "receive-sms-check": "receive-sms-check.js",
-      "receive-sms-ack": "receive-sms-ack.js",
-      "control-output": "control-output.js",
-      "get-info": "get-info.js",
-      "get-io": "get-io.js",
-      "tc-router": "tc-router.js"
-    }
-  },
-  "dependencies": {
-    "@phoenixcontactusa/node-tcrouter": "^1.0.6"
-  }
+	"name": "@phoenixcontactusa/node-red-contrib-tcrouter",
+	"version": "1.1.2",
+	"description": "Node red nodes for communicating with the Phoenix Contact TC Router",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [ "TC Router", "Phoenix Contact", "node-red", "IIOT" ],
+	"author": "Zachary Mink",
+	"license": "MIT",
+	"node-red": {
+		"nodes": {
+			"send-email": "send-email.js",
+			"send-sms": "send-sms.js",
+			"receive-sms-check": "receive-sms-check.js",
+			"receive-sms-ack": "receive-sms-ack.js",
+			"control-output": "control-output.js",
+			"get-info": "get-info.js",
+			"get-io": "get-io.js",
+			"control-vpn": "control-vpn.js",
+			"tc-router": "tc-router.js"
+		}
+	},
+	"dependencies": {
+		"@phoenixcontactusa/node-tcrouter": "^1.0.9"
+	}
 }
