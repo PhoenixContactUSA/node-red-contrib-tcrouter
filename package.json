@@ -27,6 +27,6 @@
     }
   },
   "dependencies": {
-    "@phoenixcontactusa/node-tcrouter": "^1.0.6"
+    "@phoenixcontactusa/node-tcrouter": "^1.0.9"
   }
 }
