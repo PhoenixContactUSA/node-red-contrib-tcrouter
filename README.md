@@ -8,7 +8,7 @@ In order to use the nodes in this node-red package, the TC Router device must be
 
 # Nodes
 
-![Example Flow](./assets/example.png)
+![Example Flow](https://github.com/PhoenixContactUSA/node-red-contrib-tcrouter/blob/master/assets/example.png?raw=true)
 
 ## send-sms
 
